@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tracking - Flight Price Tracker</title>
+    <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body>
+    <header>
+        <h1>Flight Price Tracker</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="tracking.html" class="active">My Tracking</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="tracking-lookup">
+            <h2>View Your Tracking Requests</h2>
+            <form id="lookupForm">
+                <div class="form-group">
+                    <label for="lookupChatId">Your Telegram Chat ID</label>
+                    <input type="number" id="lookupChatId" name="telegram_chat_id" placeholder="123456789" required>
+                </div>
+                <button type="submit">View My Tracking Requests</button>
+            </form>
+        </section>
+        
+        <section id="trackingResults" class="tracking-results" style="display: none;">
+            <!-- Tracking results will be displayed here -->
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Flight Price Tracker. Built for travelers who want the best deals.</p>
+    </footer>
+    
+    <script src="src/scripts/tracking.js"></script>
+</body>
+</html>

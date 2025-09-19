@@ -1,0 +1,28 @@
+{
+  "name": "flight-price-tracker-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for Flight Price Tracker with accessibility compliance",
+  "main": "index.html",
+  "scripts": {
+    "test": "npm run test:html && npm run test:accessibility",
+    "test:html": "html-validate src/**/*.html",
+    "test:accessibility": "pa11y-ci --sitemap http://localhost:8000/sitemap.xml --reporter cli",
+    "test:accessibility:local": "pa11y http://localhost:8000/",
+    "lint:css": "stylelint 'src/styles/**/*.css'",
+    "lint:js": "eslint 'src/scripts/**/*.js'",
+    "validate": "npm run lint:css && npm run lint:js && npm run test:html"
+  },
+  "devDependencies": {
+    "pa11y": "^7.0.0",
+    "pa11y-ci": "^3.1.0",
+    "html-validate": "^8.7.0",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0",
+    "eslint": "^8.55.0",
+    "eslint-config-standard": "^17.1.0",
+    "axe-core": "^4.8.3"
+  },
+  "keywords": ["accessibility", "wcag", "a11y", "flight-tracker"],
+  "author": "Flight Price Tracker Team",
+  "license": "MIT"
+}

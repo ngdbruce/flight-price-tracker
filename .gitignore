@@ -1,0 +1,164 @@
+# Environment and Configuration Files
+.env
+.env.local
+.env.prod
+.env.production
+.env.staging
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+.env/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Node.js / Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+.npm
+.eslintcache
+.stylelintcache
+
+# Next.js
+.next/
+out/
+
+# React / Vite
+dist/
+build/
+*.local
+
+# Database
+*.db
+*.sqlite3
+*.sqlite
+db.sqlite3
+postgres_data/
+mysql_data/
+
+# Docker
+.dockerignore
+
+# Redis / Cache
+dump.rdb
+*.rdb
+redis_data/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+
+
+# Temporary folders
+tmp/
+temp/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# SSL Certificates
+ssl/
+certs/
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+
+# Monitoring and Analytics
+.sentry-*
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+
+
+# Documentation build
+docs/_build/
+docs/build/
+site/
+
+# Local development overrides
+docker-compose.override.yml
+docker-compose.local.yml
+
+# Generated files
+generated/
+auto-generated/
+
+# User-specific files
+.user.ini
+.personal/
+
+# GitHub Copilot and AI artifacts that shouldn't be tracked
+.github/prompts/
+.github/copilot-instructions.md

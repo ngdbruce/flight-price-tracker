@@ -1,0 +1,691 @@
+/* Tracking Page Specific Styles */
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    margin-bottom: var(--space-8);
+}
+
+.page-header__title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    margin: 0 0 var(--space-4) 0;
+    color: var(--color-text-primary);
+}
+
+.page-header__description {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    margin: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Cards */
+.card {
+    background-color: var(--color-bg-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-base);
+    margin-bottom: var(--space-6);
+}
+
+.card__title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    margin: 0 0 var(--space-4) 0;
+    color: var(--color-text-primary);
+}
+
+/* Chat ID Form */
+.chat-id-form .input-group {
+    display: flex;
+    gap: var(--space-3);
+    align-items: end;
+}
+
+.chat-id-form .form-input {
+    flex: 1;
+}
+
+@media (max-width: 640px) {
+    .chat-id-form .input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* Hidden Content */
+.hidden {
+    display: none !important;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-semibold);
+    margin: 0 0 var(--space-6) 0;
+    color: var(--color-text-primary);
+}
+
+/* Overview Grid */
+.tracking-overview {
+    margin-bottom: var(--space-8);
+}
+
+.overview-grid {
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+    .overview-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Stat Cards */
+.stat-card {
+    background-color: var(--color-bg-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-base);
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-card__icon {
+    font-size: var(--font-size-3xl);
+}
+
+.stat-card__value {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    line-height: var(--line-height-tight);
+}
+
+.stat-card__label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    font-weight: var(--font-weight-medium);
+}
+
+.stat-card--active .stat-card__value {
+    color: var(--color-success);
+}
+
+.stat-card--expired .stat-card__value {
+    color: var(--color-warning);
+}
+
+.stat-card--alerts .stat-card__value {
+    color: var(--color-primary);
+}
+
+/* Controls Bar */
+.tracking-controls {
+    margin-bottom: var(--space-6);
+}
+
+.controls-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-bg-primary);
+    padding: var(--space-4);
+    border-radius: var(--radius-base);
+    box-shadow: var(--shadow-sm);
+}
+
+.filter-group,
+.sort-group {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.filter-label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+}
+
+.filter-select {
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--color-border-medium);
+    border-radius: var(--radius-base);
+    font-size: var(--font-size-sm);
+    background-color: var(--color-bg-primary);
+}
+
+@media (max-width: 640px) {
+    .controls-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-group,
+    .sort-group {
+        justify-content: space-between;
+    }
+}
+
+/* Requests Grid */
+.requests-grid {
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .requests-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .requests-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tracking Cards */
+.tracking-card {
+    background-color: var(--color-bg-primary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-base);
+    overflow: hidden;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.tracking-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.tracking-card__header {
+    padding: var(--space-4) var(--space-4) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.tracking-card__route {
+    flex: 1;
+}
+
+.route-airports {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-1);
+}
+
+.airport-code {
+    font-family: var(--font-family-mono);
+    background-color: var(--color-bg-tertiary);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-primary);
+}
+
+.route-arrow {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-base);
+}
+
+.route-type {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.status-badge--active {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.status-badge--expired {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.status-badge--inactive {
+    background-color: var(--color-gray-200);
+    color: var(--color-gray-700);
+}
+
+/* Card Details */
+.tracking-card__details {
+    padding: var(--space-4);
+    border-top: 1px solid var(--color-border-light);
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-2);
+}
+
+.detail-row:last-child {
+    margin-bottom: 0;
+}
+
+.detail-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    font-weight: var(--font-weight-medium);
+}
+
+.detail-value {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-medium);
+}
+
+/* Price Section */
+.tracking-card__price {
+    padding: var(--space-4);
+    background-color: var(--color-bg-secondary);
+}
+
+.current-price {
+    text-align: center;
+}
+
+.price-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-1);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.price-value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-1);
+}
+
+.price-amount {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.price-trend {
+    font-size: var(--font-size-lg);
+}
+
+.price-trend--up {
+    color: var(--color-error);
+}
+
+.price-trend--down {
+    color: var(--color-success);
+}
+
+.price-trend--same {
+    color: var(--color-text-muted);
+}
+
+.price-updated {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+/* Card Actions */
+.tracking-card__actions {
+    padding: var(--space-4);
+    display: flex;
+    gap: var(--space-2);
+}
+
+.btn--small {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-sm);
+    min-width: auto;
+}
+
+.btn--danger {
+    background-color: var(--color-error);
+    color: white;
+    border-color: var(--color-error);
+}
+
+.btn--danger:hover:not(:disabled) {
+    background-color: #dc2626;
+    border-color: #dc2626;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: var(--space-12) var(--space-4);
+}
+
+.empty-state__icon {
+    font-size: 4rem;
+    margin-bottom: var(--space-4);
+    display: block;
+}
+
+.empty-state__title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    margin: 0 0 var(--space-3) 0;
+    color: var(--color-text-primary);
+}
+
+.empty-state__description {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    margin: 0 0 var(--space-6) 0;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Loading State */
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-12);
+}
+
+.loading-state .loader {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: var(--space-4);
+}
+
+.loading-state .loading-text {
+    color: var(--color-text-secondary);
+    font-weight: var(--font-weight-medium);
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: var(--z-modal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.modal.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.modal__content {
+    background-color: var(--color-bg-primary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    max-width: 90vw;
+    max-height: 90vh;
+    width: 800px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: scale(0.95);
+    transition: transform var(--transition-base);
+}
+
+.modal.visible .modal__content {
+    transform: scale(1);
+}
+
+.modal__content--small {
+    width: 400px;
+}
+
+.modal__header {
+    padding: var(--space-6) var(--space-6) var(--space-4);
+    border-bottom: 1px solid var(--color-border-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal__title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    margin: 0;
+    color: var(--color-text-primary);
+}
+
+.modal__close {
+    background: none;
+    border: none;
+    font-size: var(--font-size-2xl);
+    color: var(--color-text-muted);
+    cursor: pointer;
+    padding: var(--space-2);
+    border-radius: var(--radius-sm);
+    transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.modal__close:hover {
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-tertiary);
+}
+
+.modal__body {
+    padding: var(--space-6);
+    flex: 1;
+    overflow-y: auto;
+}
+
+.modal__footer {
+    padding: var(--space-4) var(--space-6) var(--space-6);
+    border-top: 1px solid var(--color-border-light);
+    display: flex;
+    gap: var(--space-3);
+    justify-content: flex-end;
+}
+
+/* Chart Container */
+.chart-container {
+    position: relative;
+    height: 400px;
+    margin-bottom: var(--space-6);
+}
+
+/* Price Statistics */
+.price-stats {
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.price-stat {
+    text-align: center;
+    padding: var(--space-4);
+    background-color: var(--color-bg-tertiary);
+    border-radius: var(--radius-base);
+}
+
+.price-stat__value {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-1);
+}
+
+.price-stat__label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Delete Details */
+.delete-details {
+    background-color: var(--color-bg-secondary);
+    padding: var(--space-4);
+    border-radius: var(--radius-base);
+    margin-top: var(--space-4);
+}
+
+.delete-details__route {
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-1);
+}
+
+.delete-details__dates {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+/* Screen Reader Only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .page-header__title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .card {
+        margin-left: calc(-1 * var(--space-4));
+        margin-right: calc(-1 * var(--space-4));
+        border-radius: 0;
+    }
+    
+    .modal__content {
+        margin: var(--space-4);
+        width: auto;
+        max-width: none;
+    }
+    
+    .modal__header,
+    .modal__body,
+    .modal__footer {
+        padding-left: var(--space-4);
+        padding-right: var(--space-4);
+    }
+    
+    .tracking-card__actions {
+        flex-direction: column;
+    }
+    
+    .overview-grid {
+        gap: var(--space-3);
+    }
+    
+    .stat-card {
+        padding: var(--space-4);
+    }
+}
+
+/* Dark mode adjustments for tracking page */
+@media (prefers-color-scheme: dark) {
+    .airport-code {
+        background-color: var(--color-gray-600);
+        color: var(--color-gray-100);
+    }
+    
+    .status-badge--active {
+        background-color: #064e3b;
+        color: #a7f3d0;
+    }
+    
+    .status-badge--expired {
+        background-color: #78350f;
+        color: #fde68a;
+    }
+    
+    .status-badge--inactive {
+        background-color: var(--color-gray-700);
+        color: var(--color-gray-300);
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .tracking-card,
+    .card,
+    .stat-card {
+        border: 2px solid var(--color-text-primary);
+    }
+    
+    .status-badge {
+        border: 1px solid currentColor;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .tracking-card:hover,
+    .stat-card:hover {
+        transform: none;
+    }
+    
+    .modal__content {
+        transition: none;
+    }
+    
+    .modal.visible .modal__content {
+        transform: none;
+    }
+}
